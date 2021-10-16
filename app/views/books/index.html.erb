@@ -1,5 +1,5 @@
 
-  <body>
+  <!--<body>-->
   <h1>Books</h1>
   <table>
     <thead>
@@ -9,10 +9,11 @@
         <th colspan="3"></th>
       </tr>
 
-  <% @books.each do |book| %>
+
 
 
   <tbody>
+    <% @books.each do |book| %>
     <tr>
       <td><%= book.title%></td>
       <td><%= book.body %></td>
@@ -20,9 +21,10 @@
       <td><%= link_to "Edit",edit_book_path(book)%></td>
       <td><%= link_to "Destroy",book_path(book), method: :delete, "data-confirm" => "Are you sure?" %></td>
     </tr>
+    <% end %>
   </tbody>
 
-  <% end %>
+
 
   </table>
   <h1>New Book</h1>
@@ -52,4 +54,4 @@
 
 
 
-</body>
+<!--</body>-->
